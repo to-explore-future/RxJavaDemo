@@ -1,5 +1,7 @@
 package com.fs.rxjavademo;
 
+import com.fs.rxjavademo.RxRetrofit.RetrofitManager;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,6 +14,29 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+
+        RetrofitManager.getInstance().get("www.baidu.com", "json", new io.reactivex.Observer<Object>() {
+            @Override
+            public void onSubscribe(io.reactivex.disposables.Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(Object o) {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
     }
+
+
 }
